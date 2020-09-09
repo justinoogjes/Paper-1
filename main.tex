@@ -1,0 +1,487 @@
+\documentclass[twocolumn, a4paper]{article}
+\usepackage[draft]{graphicx}
+\usepackage{amsmath}
+\usepackage{gensymb}
+\usepackage{textcomp}
+\usepackage{siunitx}
+\usepackage{color}
+\definecolor{green}{rgb}{0,1,0}
+\providecommand{\comment}[1]{{\large\bf #1}}
+\usepackage{natbib}
+\usepackage{biblatex} %Imports biblatex package
+\usepackage[english]{babel}
+\addbibresource{bibliography.bib}
+
+\title{Bibliography management: \texttt{biblatex} package}
+\begin{document}
+	\title{On the observed micrometeorology within and outside of tree canopies, over different surfaces in an inner urban park, and the effect on PET.}
+	\maketitle
+	\author{Oogjes, Justin; Rayner, Peter; Livesley, Stephen}
+	\\
+	\section*{Abstract}
+The role that trees and green space in an inner urban park play in urban climate and human heat stress is explored using a high-density network of observations of temperature, relative humidity, wind speed, solar radiation and black globe temperature. Variables were investigated in relation to the presence or absence of a tree, thickness of tree canopy, and surface type, between pervious and non-pervious on heatwave days, as defined by the maximum and minimum temperature over a given 24 hour period averaging 30\celsius or more. It finds that while trees with full canopy cover bring shade, the same full canopy cover also acts to resist wind speed, with reductions of above 50\% relative to open, non-treed areas within the same urban park, in terms of maximum wind gusts. For trees with reduced tree canopy cover, wind resistance is 30\% for north winds and negligible for south winds. PET was calculated for these days, and was found to be warm under thicker trees, very warm under sparsely canopied trees, and hot or very hot in treeless locations. The effect of wind drag by tree canopies on PET was calculated, and found to contribute offset? between 8\celsius and 13\celsius in most cases to cooling, for thick trees. Sparse trees resulted in reduced cooling with wind drag making less difference. These findings will have implications for tree placement and tree health on urban planning and climate goals.
+
+\newpage \section{Introduction}
+Continually increased urbanization and the accompanying urban sprawl, along with increased urban density \cite{RN302} leads to an increased Urban Heat Island (UHI) effect, raising inner city and urban air temperatures, as compared to adjacent rural landscapes \cite{RN2016} \cite{RN2057}. This increase in temperature has been shown to increase rates of mortality and morbidity, as both maximum and minimum heat thresholds are reached and exceeded for populated centres \cite{RN577} \cite{RN2041}.
+
+Trees have an important role to play in human heat stress. The shade trees provide in reducing heat stress has been well documented, as has cooling provided by evapotranspiration in well irrigated areas with pervious surface types.
+
+It has been well established that greening with irrigation can help mitigate the UHI \cite{RN231} \cite{RN715} with increased shade and evapotranspiration \cite{RN2053}.
+
+The Surface Energy Balance (SEB) provides a model of the radiation balances that helps in understanding land-atmosphere interactions \cite{RN2014} \cite{RN990},
+
+It is also possible to have an urban cool island, particularly in more heavily built up urban areas, as shade from buildings acts to reduce solar radiation receipt \cite{RN2087}. It is worth noting that the shade from buildings and other structures such as shade cloths has a similar effect as the shade from trees \cite{RN2102} \cite{SHASHUABAR2009179}.
+
+Urban trees interact by blocking solar radiation receipt thereby reducing surface heating and longwave radiation emission \cite{RN1128}. Trees also provide some cooling through evapotranspiration \cite{RN2053}, particularly where water is abundantly available \cite{RN231} with increased latent heat partitioning. Where water has limited availability, such as in dry conditions or over impervious surfaces, sensible heat dominates resulting in higher temperatures.
+\\
+While studies generally focus on the evapotranspiration and shading effect of trees, eg \cite{ISI:000339905000001} \cite{RN2073} there is reduced focus on trees that have degraded or otherwise reduced tree canopy cover regardless of the reason, and little empirical evidence for the effect of tree canopy cover on wind speed at the scale of a small urban park.
+\\
+This study addresses these gaps by delving further into the role that trees play in urban climate and human heat stress. It observes air temperature, relative humidity, wind speed, solar radiation and black globe temperature in relation to the presence or absence of a tree. If there is a tree, it looks at how variables change as canopy thickness changes. Variable behaviour is also observed over pervious and impervious surfaces.
+\\
+It will also calculate how PET changes in relation to the presence or absence of a tree, thickness of tree canopy cover, and surface type.
+
+In the case of this research, the site is a large green roof over an underground car park, situated just to the north of Melbourne City, and within the southern part of the University of Melbourne, Parkville Campus. The park features an open, light grey-coloured impervious paved plaza to the north with ornamental apple trees to the east and west of this plaza, over a light grey gravel surface, shown in Figure (1), below. Running down the centre of the park are two rows of Elm trees on each side of a path, with more trees around the edge. In between the rows there is open lawn, shown in Figure (2). The park is surrounded by minor roads on three sides, with a heavy-use road to the north. This is shown in Figures 1 and 2.
+\\
+
+First, this paper describes the site and its surrounding geography for data collection, the instrumentation used, and unique circumstances that needed to be taken into account.
+Second, this paper presents the multi-comparison methodology using multiple weather stations in three main locations as the basis for data analysis. Third, it uses the collected data to calculate MRT. Fourth, the PET for each location during the warm season is calculated. Finally, a discussion is presented on implications for park design.
+\\
+\\comment{yes, good enough to go on with}
+
+\section{Methodology}
+\subsection{Instrument set-up and site description}
+\\
+While observations were made almost continuously for 18 months, the main period of interest is during the hottest weather conditions, when heat stress is a concern. Thus, only heatwave days, according to a slightly modified version of \cite{RN577} and \cite{RN2041} for Melbourne were used, where the maximum and minimum for a 24-hour diurnal cycle averaged 30\celsius, taking the daytime observations only. Using this criterion for heatwaves, a total of 11 days were observed. However, as the two weather stations over the grassed areas required extra infrastructure to be installed in the park, these two weather stations were not operating during the majority of the first summer of observations, during which the first four heatwave days were observed. Thus, to maintain consistency, only the latter 7 heatwave days that all weather stations observed were considered.
+\begin{figure}
+	\begin{center}
+		\scalebox{0.5}{\includegraphics{unisquarenorth.png}} 
+		\caption{Figure 1. Image of the north plaza. The north plaza weather station was mounted on the north-west light pole within the elongated diamond pattern on the surface. The south plaza weather station was mounted on the light pole diagonally opposite to the south east, again within the elongated diamond surface pattern. \label{fig:prior_uncertainties}}
+	\end{center}
+\end{figure}
+
+\begin{figure}
+	\begin{center}
+		\scalebox{0.5}{\includegraphics{unisquaresouth.png}} 
+		\caption{Figure 2. The southern section of the park. The treed weather stations were located on the light poles marked with the red dots; while the grassed weather stations were located on the temporary poles denoted by the blue dots, respectively. \label{fig:prior_uncertainties}}
+	\end{center}
+\end{figure}
+
+
+\\
+This research, done in collaboration with the City of Melbourne Council, used 7 weather stations mounted 2.8 metres above ground level on light poles, observing temperature, relative humidity, solar radiation, wind speed and black globe temperature at 30-minute intervals, as shown in Figures (1) and (2). This height was chosen for public safety, as it was not possible to protect the weather stages in cages, while in a moderately-high use urban park. Even though this height is above that which humans experience, it was not expected to significantly affect results.
+\\
+
+\\\comment{this seems a better opening}
+
+\comment{then this para will better connect to the previous} These weather stations had a staggered roll-out according to available infrastructure. The first five weather stations were mounted during the first week of October 2016. This included the two weather stations in the plaza \citep{RN2032} and the three weather stations under or just within the tree canopy stand, with a combination of pervious and impervious dark surfaces. Following this, in March 2017 the remaining two weather stations were mounted on temporary poles near black bitumen footpaths over otherwise grassed areas that featured partially open sky.
+\\
+The reasoning for operating such a high-density array of weather stations in such a small park was to observe the different interactions between the surface and near-surface atmosphere over each different surface type, and in the presence and absence of trees \cite{RN1695} \cite{RN1706}. There was also the possibility of observing fetch affects across different surface types, such as increased humidity over a dry, impervious surface. 
+\\
+This fetch affect has been observed in studies of urban parks in New Zealand \cite{RN710}. Another feature that may be observed in this set-up is an extended cooling effect from trees towards a more open area.
+\\
+These weather stations remained operational until May 2018 when all except the north plaza station were taken down in preparation for urban renewal works.
+\subsection{Multi-comparison approach}
+This study used a multi-comparison approach, grouping each station according to surface characteristics. North plaza stations will be in the north plaza; treed stations under trees; and grassed stations over the grassed regions. The north plaza will be compared to both the grassed stations and the treed stations. The treed stations will also be compared to each other due to differences in tree canopy thickness, as will the grassed stations with different building heights tot he east and west affecting shading, and the plaza stations which represent different proportions of green and porous surfaces.\comment{explain further: Is that ok?} This enables comparing the response of variables over different surface types to the near-surface atmosphere. This includes comparing trees with good and poor-quality tree canopy cover. Trees with reduced canopy cover dominate the south of the park.
+\\
+\subsection{PET}
+The PET uses a scale ranging from very cold to very hot, measured in °C PET, making it simple due to its units. The PET is defined as the equivalent indoor temperature (without wind and solar radiation) to when a human body is balanced with respect to core and skin temperature in outdoor conditions \cite{RN2062}, \cite{RN2063}. However, the scale depends on location, with warmer climates corresponding to higher PET values \cite{RN2050}. The PET has been adjusted to suit different climate regions \cite{RN2068}. The original application was for Western and Central European climates \cite{RN2064}. These indexes take meteorological parameters such as temperature, relative humidity, wind speed, and mean radiant temperature as inputs, along with non-meteorological inputs such as parameters for clothing and metabolic rate or activity. PET is based on the Munich energy balance model for individuals (MEMI), describing the energy balance equation for the human body as follows:
+\\
+\begin{equation}
+	M + W + R + C + ED + ERE + ESW + S = 0
+      \end{equation}
+      \\
+Where M is the metabolic rate, W is the physical work output, R is the net radiation on the body, C is the convective heat flow, ED is the latent heat flow to evaporate water in the skin (imperceptible perspiration), ERE is the sum of heat flows for heating and humidifying the air, ESW is heat flow due to evaporation of sweat and S is heat storage. Of these variables, air temperature controls C and ERE; relative humidity controls ED, ERE, ESW; wind speed controls C, ESW; and mean radiant temperature controls R. Parameters for clothing (clothing units) and human activity (in Watts) are also required \cite{RN2062}, \cite{RN2044}.
+
+\section{Results}
+\subsection{Observations of temperature and relative humidity}
+Air temperature under the tree canopy was 1\celsius cooler than the non-treed areas, as would be expected with park cooling. This compares to 1.7\kelvin reduction from an impervious courtyard baseline as found by \cite{SHASHUABAR2009179}, but reached 2.2\kelvin reduction when tree shade combined with irrigated lawn. Cooling was only 0.5\kelvin when only considering irrigated grass without shade from trees. Globe temperature is highest in the plaza, especially the north plaza. The western grassed area shows a higher globe temperature than the eastern grassed area. The southern treed location displays a slightly lower globe to the grassed locations, but higher than the other treed locations with thicker canopy cover.
+\comment{Below para moved from discussion per your comment}
+Black globe temperatures, shown in Figure (2) follow trends that mirror air temperature, but with larger variability between sites within the park on the same day. The north and central treed locations are clearly lower, while the north plaza location displays higher globe temperatures than any other location, including other open locations. Globe temperatures tend to be about 10\celsius higher than air temperatures in open locations and 5\celsius to 10\celsius in treed locations. This equates to maximum globe temperatures of close to 50\celsius in open locations and 40\celsius to 45\celsius under treed locations. The south treed location reaches 45\celsius to 50\celsius, more comparable to the open locations. This demonstrates trees with poor canopy cover are less effective at reducing heat stress. The east grassed location has 1\celsius higher globe temperatures than the west grassed location, with more days exceeding 50\celsius. This is probably due to the west grassed location being closer to a tall building to the west, providing more afternoon shade.
+Relative humidity shows only slight trends between locations between sites, with the treed locations showing slighter higher minimum relative humidity, followed by the grassed locations, and the plaza sites showing the lowest. These small changes are in line with previous studies also demonstrating small changes in relative humidity \cite{RN1128} \cite{SHASHUABAR2009179}.
+
+
+I think the figures
+should be at least mentioned here "Figure~x shows ..." No control over where the figures actually are. 
+
+
+\subsection{Wind Resistance Effect}
+With respect to the first set of comparisons (Figure 3), the hot, sunny days demonstrate a reduction of wind speed of 30\% at the southernmost treed station with reduced tree canopy cover, when compared to the open plaza sites. This reduction reaches over 50\% when the comparison is made with the central and northernmost treed site with the thicker tree canopy covers. These reductions are similar, but not as extreme as \cite{SHASHUABAR2009179} who found a wind speed reduction of 80\% near trees, as compared to an open courtyard.
+
+\subsection{Solar Radiation}
+The strong solar loading is clear for the open plaza locations. However, it is about 30\% higher at the north plaza location, relative to the south plaza location. The east and west grassed locations, which receives full sun from late morning to late afternoon also show high solar loading. Interesting to note are the higher values (above $1000  W/m^2)$ at the eastern and western grassed locations. 
+These days were completely clear and cloudless. Other days showed varied amounts of cloud cover. The south treed location is the most interesting. Despite this station being under a tree canopy, it still shows high solar loading, comparable to the treeless locations. The north treed location displays a solar loading comparable to the treeless south plaza location, but this is due to a gap in the tree canopy that lets solar radiation through around midday. At other times shading is prevalent. The central treed location features a smaller gap between tree canopies, therefore maximum solar radiation values are reduced. Regardless, the treed locations show reduced air temperatures. This is in line with \cite{SHASHUABAR2009179} who found tree shade to be the most efficient at reducing air temperature.
+\\
+
+
+	\begin{table}
+	\scalebox{0.7}
+	
+	\begin{tabular}{|c||c|c||c|c|}
+		\hline 
+		 Date & North Plaza S R & Min. R H & South Plaza S R & Min. R H \\ 
+		\hline 
+		Dec 28, 2016 & 876 & 32.5 & 590 & 30.1 \\ 
+		\hline 
+		Jan 7, 2017 & 944 & 23.4 & 656 & 23.3 \\ 
+		\hline 
+		Feb 8, 2017 & 899 & 31.5 & 615 & 29.9 \\ 
+		\hline 
+		Feb 9, 2017 & 828 & 39.9 & 606 & 39.4 \\ 
+		\hline 
+		Dec 19, 2017 & 870 & 28.7 & 641 & 28.0 \\ 
+		\hline 
+		Jan 6, 2018 & 952 & 13.5 & 675 & 12.6 \\ 
+		\hline 
+		Jan 11, 2018 & 955 & 21.0 & 682 & 20.5 \\ 
+		\hline 
+		Jan 18, 2018 & 946 & 12.2 & 673 & 11.4 \\ 
+		\hline 
+		Jan 19, 2018 & 943 & 13.1 & 679 & 12.3 \\ 
+		\hline 
+		Jan 28, 2018 & 885 & 30.0 & 614 & 28.2 \\ 
+		\hline 
+		Feb 7, 2018 & 868 & 17.8 & 611 & 16.9 \\ 
+		\hline 
+	\end{tabular} 
+	\onecolumn{\caption{Table1. This shows maximum solar radiation $(W/m^2)$ and minimum relative humidity for the north and south plaza locations for each day in the observation period that met the heatwave criterion as outlined in the methodology.}}
+\end{table}
+
+\begin{table}
+	\begin{tabular}{|c||c|c||c|c|}
+	\hline 
+	 Date & Western Grassed S R & Min. R H & Eastern Grassed S R & Min. R H \\ 
+	\hline 
+	Dec 28, 2016 & - & - & - & - \\ 
+	\hline 
+	Jan 7, 2017 & - & - & - & - \\ 
+	\hline 
+	Feb 8, 2017 & - & - & - & - \\ 
+	\hline 
+	Feb 9, 2017 & - & - & - & - \\ 
+	\hline 
+	Dec 19, 2017 & 949 & 28.6 & 951 & 30.0 \\ 
+	\hline 
+	Jan 6, 2018 & 1024 & 13.2 & 1056 & 13.9 \\ 
+	\hline 
+	Jan 11, 2018 & 1011 & 23.5 & 1043 & 23.6 \\ 
+	\hline 
+	Jan 18, 2018 & 1020 & 14.1 & 1056 & 13.7 \\ 
+	\hline 
+	Jan 19, 2018 & 1018 & 14.1 & 1054 & 14.9 \\ 
+	\hline 
+	Jan 28, 2018 & 955 & 31.9 & 978 & 31.4 \\ 
+	\hline 
+	Feb 7, 2018 & 951 & 20.3 & 977 & 19.7 \\ 
+	\hline 
+\end{tabular} 
+	\onecolumn{\caption{Table 2. This shows maximum solar radiation $(W/m^2)$ and minimum relative humidity for the east and west grassed locations for each day in the observation period that met the heatwave criterion as outlined in the methodology. Note the absence of results for the first four days when these weather stations were not yet installed. The dates are still included here as these were the only weather stations not installed at this time, where all of the other stations were installed, reflecting the full duration of data collection for this study.}}
+      \end{table}
+
+      \begin{table}
+	\begin{tabular}{|c||c|c||c|c||c|c|}
+	\hline 
+	 Date & North treed S R & Min. R H & Central treed S R & Min. R H & South treed S R & Min. R H \\ 
+	\hline 
+	Dec 28, 2016 & 471 & 32.0 & 142 & 32.6 & 715 & 33.5 \\ 
+	\hline 
+	Jan 7, 2017 & 595 & 24.4 & 451 & 25.3 & 963 & 24.8 \\ 
+	\hline 
+	Feb 8, 2017 & 456 & 30.8 & 548 & 31.8 & 910 & 32.3 \\ 
+	\hline 
+	Feb 9, 2017 & 393 & 43.0 & 399 & 42.1 & 769 & 41.9 \\ 
+	\hline 
+	Dec 19, 2017 & 559 & 29.0 & 106 & 29.8 & 634 & 29.6 \\ 
+	\hline 
+	Jan 6, 2018 & 676 & 13.4 & 457 & 14.1 & 998 & 12.9 \\ 
+	\hline 
+	Jan 11, 2018 & 630 & 21.9 & 451 & 23.5 & 957 & 23.2 \\ 
+	\hline 
+	Jan 18, 2018 & 588 & 12.7 & 454 & 13.0 & 992 & 12.3 \\ 
+	\hline 
+	Jan 19, 2018 & 536 & 13.7 & 447 & 15.5 & 994 & 14.7 \\ 
+	\hline 
+	Jan 28, 2018 & 344 & 29.2 & 600 & 30.5 & 911 & 30.3 \\ 
+	\hline 
+	Feb 7, 2018 & 562 & 18.0 & 450 & 19.1 & 906 & 19.1 \\ 
+	\hline 
+\end{tabular} 
+	\onecolumn{\caption{Table 3. This shows maximum solar radiation $(W/m^2)$ and minimum relative humidity for the north, central and south treed locations for each day in the observation period that met the heatwave criterion as outlined in the methodology.}}
+      \end{table}
+
+\begin{figure}
+	\begin{center}
+		\scalebox{0.7}{\includegraphics{airtemp1.png}} 
+		\scalebox{0.7}{\includegraphics{bbtemp1.png}} 
+		\scalebox{0.7}{\includegraphics{airtemp2.png}} 
+		\scalebox{0.7}{\includegraphics{bbtemp2.png}} 
+		\scalebox{0.7}{\includegraphics{airtemp3.png}} 
+		\scalebox{0.7}{\includegraphics{bbtemp3.png}} 
+		\scalebox{0.7}{\includegraphics{airtemp4.png}} 
+		\scalebox{0.7}{\includegraphics{bbtemp4.png}} 
+		\scalebox{0.7}{\includegraphics{airtemp5.png}} 
+		\scalebox{0.7}{\includegraphics{bbtemp5.png}} 
+		\scalebox{0.7}{\includegraphics{airtemp6.png}} 
+		\scalebox{0.7}{\includegraphics{bbtemp6.png}} 
+		\scalebox{0.7}{\includegraphics{airtemp7.png}} 
+		\scalebox{0.7}{\includegraphics{bbtemp7.png}} 
+		\caption{Figure 3. These plots show the minimum and maximum air temperature (left) and black globe temperature (right) for each heatwave day and for each location within the park. Each plot represents one variable for all days at one site. Note the panel for black globe temperature for the central treed location has been omitted due to instrument malfunction The figures for the two plaza locations and the three treed locations clearly show two seperate groupings of data. This is reflective of the two summers of the observation period with the winter period in between for the 18-month period on a seasonal x-axis. The east and west grassed period do not show the same pattern as these locations were not yet installed for the majority of the first summer period. A further explanation of the days displayed as month/day/year. For example, Jan717 is the 7th January, 2017. \label{fig:prior_uncertainties}}
+	\end{center}
+\end{figure}
+
+\begin{figure}
+	\begin{center}
+		\scalebox{0.5}{\includegraphics{ws1.png}} 
+		\scalebox{0.5}{\includegraphics{ws3.png}}
+		\scalebox{0.5}{\includegraphics{ws4.png}}
+		\scalebox{0.5}{\includegraphics{ws5.png}}
+		\scalebox{0.5}{\includegraphics{ws6.png}}
+		\scalebox{0.5}{\includegraphics{ws7.png}}
+		\scalebox{0.5}{\includegraphics{ws8.png}}
+		\caption{Figure 4. These plots show maximum and minimum wind speed for all heatwave days for each location, following the same explanations as Figure 3. Each panel represents all days and for one location only. \label{fig:prior_uncertainties}}
+	\end{center}
+\end{figure}
+
+\begin{table}
+	\begin{tabular}{|c||c|c|c|c|c|c|c|}
+	\hline 
+	 Date & North Plaza & South Plaza & West Grassed & East Grassed & North Treed & Central Treed & South Treed \\ 
+	\hline 
+	Dec 28, 2016 & 66.9 & 63.8 & - & - & 30.6 & 40.4 &  33.7 \\ 
+	\hline 
+	Jan 7, 2017 & 67.3 & 67.0 & - & - & 31.5 & 36.9 & 53.5 \\ 
+	\hline 
+	Feb 8, 2017 & 99.6 & 61.9 & - & - & 28.5 & 36.1 & 50.4 \\ 
+	\hline 
+	Feb 9, 2017 & 96.0 & 70.5 & - & - & 28.5 & 33.5 & 45.1 \\ 
+	\hline 
+	Dec 19, 2017 & 78.7 & 64.8 & 60.6 & 64.4 & 32.3 & - & 33.1 \\ 
+	\hline 
+	Jan 6, 2018 & 96.0 & 62.1 & 61.1 & 65.4 & 38.1 & - & 54.6 \\ 
+	\hline 
+	Jan 11, 2018 & 99.0 & 65.1 & 53.1 & 63.4 & 33.6 & - & 48.1 \\ 
+	\hline 
+	Jan 18, 2018 & 133.6 & 62.2 & 57.7 & 65.0 & 32.3 & - & 53.8 \\ 
+	\hline 
+	Jan 19, 2018 & 106.6 & 61.5 & 59.6 & 63.8 & 36.2 & - & 53.8 \\ 
+	\hline 
+	Jan 28, 2018 & 100.0 & 64.7 & 59.3 & 63.0 & 27.9 & - & 51.3 \\ 
+	\hline 
+	Feb 7, 2018 & 124.2 & 60.7 & 58.5 & 60.3 & 21.9 & - & 45.8 \\ 
+	\hline 
+\end{tabular} 
+	\onecolumn{\caption{Table 4. This shows maximum PET $(\celsius)$ for each day per column and each location per row. Again note the absence of the first four values for the west and east grassed locations, and the absence of the final seven values for the central treed location, for the reasons outlined previously.}}
+      \end{table}
+\twocolumn
+
+
+\comment{you're showing the LAI or SVF somewhere?}
+\comment{probably not now}
+
+\subsection{Psychological Equivalent Temperature (PET)}
+These data were used to calculate PET, using the equation found in Pearlmutter, (2014).
+This equation is as follows:
+\\newline
+\begin{equation*}
+  ((Tg + 273.15)^4) + ((0.65*10^8e
+    d^4))(Tg - Ta)) - 273.15)^.25))-273.15)
+        \end{equation*}
+
+where Tg is black globe temperature; Ta is air temperature; e is epsilon is the globe emissivity = 0.95; d is globe diameter is 0.15m.
+\comment{quote equation?} 
+
+\\newline
+
+
+According to his definition, the plaza locations were all very hot, with the grassed locations ranging from very hot to hot. The south treed location ranged from very warm to hot, where the central and north treed locations were generally warm. Worth noting are the cooler values for the north treed location on Jan 28th and Feb 7th. Missing data is either due to instrumentation not yet set up, in the case of the grassed locations on the first 4 days of this sample, and instrument malfunction for the central treed location for the final seven days.
+\comment{see below}
+
+The high PET values in the north plaza are partially due to high MRT values. One reason for this is the black globes receive direct solar radiation from above, but in addition to this, as the hard, impervious surface underneath is partially a brighter, cream coloured surface, it also acts to reflect solar radiation back up, so that the black globe receives shortwave radiation from above and below (Li et al., 2016).
+Modelling may glean further insights into why there are such high values of black globe temperature.
+
+\comment{explain why unrealistic, if so which measured field contributed} for all except the first two days at the north plaza location.
+
+\subsection{Wind effect on PET}
+In order to investigate the effect of this wind drag effect on PET, a simple substitution on the PET equation was performed. This consisted of taking the observations for under the north treed location, but using the wind speed observations for the north plaza location, which displayed approximately twice the wind speed. This calculation yielded a higher PET in all cases. This meant that the wind, being a hot north wind, made conditions more thermally uncomfortable. On a few occasions, it was only a few degrees warmer. On the majority of days, this difference was between 8\celsius and 13\celsius. On one day this difference approached 19\celsius. The larger differences appear with stronger winds, and thus, larger differences in wind speed, as the drag effect under the trees approximately halves the wind speed.
+In the present case, with an air temperature of over 40\celsius, the reduced wind speed under the thicker tree canopy reduces the cooling effectiveness by reducing evapotranspiration from the skin and being a less effective transporter of heat away from the human body. Thus, a reduced cooling effectiveness from less wind increases thermal discomfort. In the case of a hypothetical tree that does not force a dragging effect, cooling can increase as the wind wicks sweat and heat away from the black globe (or body).
+In general, there will be a balance, which centres on the perceived temperature of the human body. As wind speed is reduced by tree canopy resistance, heat and sweat can build more easily around the human body, even under a tree canopy. But under the hypothetical situation where a tree canopy still allows for the free flow of air and does not provide resistance, the increased flow of air will more efficiently wick away sweat and pull heat away from the human body.
+
+\comment{Now I'm confused. In the past we thought that reducing windspeed under the trees would offset the effect of shading, e.g. the calcs of black globe. Are you saying here that for PET the reduced windspeed is also a cooling effect?}
+
+
+\comment{On reflection, and after re-reading a few papers particularly by David Pearlmutter, even if the idea has some merit, the argument here will not hold water, especially if it ends up being someone like David Pearlmutter being a reviewer, who may well argue that any results originating from this methodology would not have merit. His criticism is directed at the black globe and the fact that it cannot respond to the high variability in wind speed at these microscopic scales. I therefore suggest we scrub this section and either limit this paper to the drag effect only, or use another of the HTC equations and do a comparison. I would suggest the former, so I can get at least something published}.
+
+\onecolumn
+\begin{table}
+	\begin{tabular}{|c||c|c|c|c|c|c}
+	\hline 
+	 Date & North treed PET (normal) & North treed wind (max) & North treed PET (unresisted wind) & Adjusted wind (north plaza sub.) & South treed PET & South treed adjusted PET\\ 
+	\hline 
+	Dec 28, 2016 & 30.6 & 2.0 & 38.2 & 3.7 &  33.7 & 38.2 \\ 
+	\hline 
+	Jan 7, 2017 & 31.5 & 1.2 & 40.9 & 2.2 & 53.5 & 61.9 \\ 
+	\hline 
+	Feb 8, 2017 & 28.5 & 1.5 & 31.8 & 2.4 & 50.4 & 49.1 \\ 
+	\hline 
+	Feb 9, 2017 & 28.5 & 1.7 & 31.4 & 2.8 & 45.1 & 50.2 \\ 
+	\hline 
+	Dec 19, 2017 & 32.3 & 1.5 & 39.5 & 2.7 & 33.1 & 34.2 \\ 
+	\hline 
+	Jan 6, 2018 & 38.1 & 1.5 & 56.6 & 3.2 & 54.6 & 58.6 \\ 
+	\hline 
+	Jan 11, 2018 & 33.6 & 1.2 & 39.3 & 2.1 & 48.1 & 56.5 \\ 
+	\hline 
+	Jan 18, 2018 & 32.3 & 1.3 & 41.9 & 2.5 & 53.8 & 70.8 \\ 
+	\hline 
+	Jan 19, 2018 & 36.2 & 1.4 & 49.8 & 2.8 & 53.8 & 69.9 \\ 
+	\hline 
+	Jan 28, 2018 & 27.9 & 1.2 & 39.4 & 2.4 & 51.3 & 70.1 \\ 
+	\hline 
+	Feb 7, 2018 & 21.9 & 1.0 & 34.2 & 2.0 & 45.8 & 63.1 \\ 
+	\hline 
+\end{tabular} 
+	\onecolumn{\caption{Table 5. This shows maximum PET $(\celsius)$ and maximum wind speed for the north treed location and for each day in the observation period in the first two columns. The third column gives what the north treed location PET would be using wind speed values for the north plaza location, which are presented in column 4. Column 5 gives the PET values for the south treed location, with column 6 giving the south treed PET, calculated using the north treed wind speed..}}
+      \end{table}
+
+\section{Discussion}
+
+\subsection{Temperature}
+\subsubsection{Air Temperature}
+Air temperatures under the trees is about 1\celsius lower than than the open areas, as shown in Figure (2), which is what would be expected with park cooling. Even while each day in this sample meets the previously mentioned definition of a heatwave, there is still sizable variability in day-to-day conditions, due to the timing of cold fronts traversing the location. This is a major feature of the weather in Melbourne all year. Even during the summer, these cold fronts bring at least a change in temperature, even if there is no rainfall or cloud. It is also normal that heatwave days are most likely to occur in the day or two before a cold front arrives, which is marked by a sharp drop in temperature as the wind switches from a north to north west wind to a south to south west wind. This means the variability in temperatures is natural. Other reasons for this variation are sea-breezes which operate during the warmer months. It is also apparent that the summer of 2017/18 had more heatwave days that were also hotter than the 2016/17 summer, which was milder. \comment{I don't see the relevance of this to the PET focus.}
+\comment{I mention this because some of the hottest days in the dataset are when cold fronts are coming through, which can be seen in the data. What about shortening it?}
+\subsubsection{Black Globe Temperature}
+
+
+
+\comment{this looks  more like results than discussion}
+\comment{moved into results}
+
+Differences in MRT.
+\comment{Do you see differences in net rad or MRT?} Both. net rad lower at south plaza. I think modeling could yield some answers to this. MRT: reflection or "glare" would explain much of this.
+Another point of interest is the north plaza location, which displays higher globe temperatures than even the other open locations in the summer of 2017/18, reaching 59.6\celsius on one occasion, and 54\celsius or more on another 3 occasions. These were also days with full sun and no cloud. cite Arizona paper. A study in Arizona found that observing sites near bright concrete footpaths experienced higher globe temperatures due to reflection off the footpath from below, as well as normal exposure from above (Li et al., 2016). The highly reflective surface near the north plaza location is conducive to a similar phenomenon. However, the north plaza location observed these values at these times and not the south plaza location. This is probably because the north plaza location experiences this reflection from at least one ground surface source all day (it was affected all day). The south plaza station didn't experience this reflection in the morning.
+
+
+\subsection{Relative Humidity}
+Further, being the dry season, relative humidity is generally low, shown in Tables (1) through to Table (3). Especially on hot days with north winds from the desert, relative humidity can be very low. If the wind is from the north east, relative humidity may be higher, which may explain the higher relative humidities on some days. These differences are more significant, in comparison to differences in relative humidity between locations within the park on the same day that may be due to differences in evapotranspiration from different surface types, which are all very small.
+\subsection{Wind Speed}
+Wind travelling through tree canopies are acted on by a drag effect due to the tree canopies. This resistance is related to the thickness of the tree canopy. In this urban park, where the days chosen were dominated by a north wind, the wind resistances were up to 50\% under thick tree canopy covers, and down to 30\% or less under sparse tree canopy covers, as shown in Figure (4). The south plaza and west grassed locations are the windiest locations, with wind gusts on one day each up to 4m/s. Otherwise, wind gusts at open locations reach 2.5m/s to 3m/s. These are not strong winds, and reflects how protected this inner urban park is from strong winds by surrounding buildings. It's interesting to note that the south treed location gusts show similarities to some open locations. This is reflective of the sparsity of the tree canopy at this location. The north and central treed locations both display the slowest wind speeds, never above 2m/s and frequently only reaching 1.5m/s. This exemplifies a wind drag effect that reduces wind speed by half or more. 
+Under a south wind direction, the wind resistance under thick tree canopy covers is similar to under a north wind, suggesting independence of wind direction. In the case of the south tree canopy cover, wind speed is similar to the grassed sites when the wind is from the south, suggesting wind resistance at this time and place is negligible under these conditions. It’s also possible that this wind resistance through the south tree canopy may not be due to the tree with reduced tree canopy thickness at all but may be the result of wake effects from the resistance from the thicker tree canopies when there is a north wind. However, this study is not able to directly examine this.
+
+\subsection{Wind Drag Effect on PET}
+The wind drag effect by trees helps to reduce PET and thus helps to ameliorate human heat stress. As the drag effect approximately halves the wind speed under tree canopies, the stronger the background wind, the larger that absolute reduction becomes, which increases the reduction in PET. It is a reduction as the days in question have a hot wind, so reducing the strength of this hot wind will reduce the advection of heat to under the tree canopy, reducing influence under the tree from the environmental conditions external to the tree. As these surfaces under the tree are cooler, the cool conditions under the tree are not as eroded by advection from extra heat sources not under the tree. \comment{That should show in air temperature.}
+Thus, while the effect of shading and wind reduction acts to reduce PET under trees relative to an open space is generally up to 34\celsius, when considering the hypothetical situation when trees provide shade while not affecting wind speed, the cooling is typically between 8\celsius and 13\celsius. This equates to 24\% to 38\% of the overall cooling under trees in comparison to an open area as contributed by reducing wind speed on the majority of days and taking into account the majority of locations within the park. It demonstrates that while blocking radiation remains the main driver of reducing heat stress, the effect of reducing wind, particularly hot winds does have an effect, of one quarter to one third. These results apply to the full canopy trees.
+When considering the south treed location with the reduced amount of tree canopy cover, in most cases the difference between resisted and unresisted wind speed is less than 8/celsius. In one case, the unresisted wind speed is 1\celsius warmer. The last four heatwave days show a difference of 16\celsius to 19\celsius. These results would need further research but may be due to slight differences in wind direction in the park or possibly a co-incidence of timing such that the strongest shading from the tree co-incides with the observation of strongest wind speed for the day. This may be made possible by the inconsistent shading from the tree, producing more shade at times during the afternoon, while almost none during the morning.
+
+
+\subsection{Solar Radiation}
+There was little significant solar radiation variation, only within $105Wm^-2$ for the open grassed locations, and generally near $1000Wm^-2$. Counterintuitively, solar radiation for the north and south plaza was more varied. The north plaza was consistent at $900Wm^-2$, with the south plaza between $590Wm^-2$ and $682Wm^-2$. The reason for the lower values at the south plaza location is unclear, but instrument errors \cite{ROSS2000103} or aerosols \cite{doi:10.1029/97JD01841} are cited as potential errors. As the north and south plaza stations are so close together, the south plaza observations become effectively redundant. Any other variations are insignificant. The treed locations are elevated for under a tree canopy, but this is readily explained by gaps between tree rows, and degraded tree canopies.
+
+
+
+
+
+\subsection{PET}
+PET in most open locations was hot to very hot. However, apart from the first two days, results for the north plaza are unrealistically high. This is at least partly due to the higher black globe temperatures at this location as compared to other locations, as described before. 
+One possible explanation for this is the plaza is a large impervious area that is light grey in color, resulting in a high albedo. A study in Sacramento, Los Angeles and Phoenix in the United States observed in Phoenix during the summer that while a high-reflectance surface will reduce surface temperature, it also resulted in the highest mean radiant temperature (MRT) of the study, at 62\celsius, due to reflected radiation (Li et al., 2016), with MRT being used as part of the PET equation. This high reflectivity, led to increased absorption of solar radiation from below on the black globe.
+It is likely that this process is also occurring at the present location, which will result in higher PET values. It would be useful to test this explanation by changing the colour of the same material surface, or replacing the surface to be of a different material.
+\comment{Is that unrealistic or would it also affect a human?} Another possible explanation is that there is an extra source of local radiative heating that is occurring. However, both of these explanations need further research.
+What's wrong?
+What does it mean?
+What's next?
+
+PET at the south treed location was noticeably higher than the central and north treed locations, which are both the coolest, and on a few occasions is within 10\celsius of the west grassed location that experiences full sun until mid afternoon when buildings provide some shade. This shade also contributes to making the west grassed location a few degrees cooler than the eastern grassed location.
+
+\section{Conclusion}
+A study was done in an urban park using a series of weather stations on light poles. A multi-comparison approach was used to investigate the microclimate of an urban park representing both open and treed spaces with a variety of different surface types, including grassed and impervious surfaces. It then used these observations to calculate PET and to provide an initial quantification of the influence of shading and wind drag on reducing PET for human comfort.
+It was found that the wind resistance effect was up to 50\% of the background wind speed under thicker tree canopies. Under less thick tree canopies, wind resistance is reduced, and perhaps only experiencing the wake effects of the wind resistance from the thicker tree canopies. However, this possible wake effect was not directly investigated so deserves further analysis. \comment{Can't include as a conclusion.} Do you mean the last sentence or the entire paragraph?
+The effect was calculated to be between one quarter and one third of the cooling for the majority of cases in the sample of days selected. This affirms the majority influence of solar radiation and the role of shade played by trees.
+Black globe temperatures in the plaza are much higher than the other sites at certain times under north winds \cite{RN2100}. A possible source and process for this is the higher reflection from the light grey coloured plaza with a wide areal extent which effectively increases shortwave radiation receipt by the black globe. However, this also remains uncertain and deserves further investigation. This research focused on heatwave days following a definition of the average of the maximum and minimum temperature for a given 24 hour period being above 30\celsius, in relatively low wind conditions.
+PET under trees was 30\celsius lower than in open areas, with wind resistance generally contributing 8\celsius to 13\celsius to this reduction. This showed the majority influence of shade, but highlighted that wind speed must also be considered in achieving human comfort and climate goals. Tree health must also be considered, as trees with full canopy cover are effective at reducing heat stress, where trees with poor canopy cover are much less effective at reducing heat stress, and may be compared to having no trees at all.
+Further research that focuses on a greater range of days, including windier days would be beneficial. Research that also looks at different tree species and tree configurations would also add tot he body of knowledge.
+\section{Acknowledgements}
+The authors would like to acknowledge the support of the National Environment  Science Program Clean Air and Urban Landscapes Hub (NESP CAUL), Australian Research Council center for Climate System Science (ARCCSS), the City of Melbourne Council, and the Melbourne Networked Society Institute. 
+\bibliographystyle{apa}
+\bibliography{bibliography}
+\printbibliography %Prints bibliography
+\end{document}
+
+ARGUESO, D., EVANS, J. P., PITMAN, A. J. & DI LUCA, A. 2015. Effects of City Expansion on Heat Stress under Climate Change Conditions. Plos One, 10.
+\\
+BUSH, B. C., VALERO, F. P. J., SIMPSON, A. S. & BIGNONE, L. 2000. Characterization of thermal effects in pyranometers: A data correction algorithm for improved measurement of surface insolation. Journal of Atmospheric and Oceanic Technology, 17, 165-175.
+\\
+CHEN, C. 2009. Evaluation of resistance–temperature calibration equations for NTC thermistors. Measurement, 42, 1103-1111.
+\\
+COCCOLO, S., PEARLMUTTER, D., KAEMPF, J. & SCARTEZZINI, J. L. 2018. Thermal Comfort Maps to estimate the impact of urban greening on the outdoor human comfort. Urban Forestry & Urban Greening, 35, 91-105.
+\\
+COUTTS, A. M., BERINGER, J. & TAPPER, N. J. 2007. Impact of Increasing Urban Density on Local Climate: Spatial and Temporal Variations in the Surface Energy Balance in Melbourne, Australia. Journal of Applied Meteorology and Climatology, 46, 477-480,482-493.
+\\
+COUTTS, A. M., TAPPER, N. J., BERINGER, J., LOUGHNAN, M. & DEMUZERE, M. 2013. Watering our cities: The capacity for Water Sensitive Urban Design to support urban cooling and improve human thermal comfort in the Australian context. Progress in Physical Geography, 37, 2-28.
+\\
+COUTTS, A. M., WHITE, E. C., TAPPER, N. J., BERINGER, J. & LIVESLEY, S. J. 2016. Temperature and human thermal comfort effects of street trees across three contrasting street canyon environments. Theoretical and Applied Climatology, 124, 55-68.
+\\
+EMMANUEL, R. & FERNANDO, H. J. S. 2007. Urban heat islands in humid and arid climates: role of urban form and thermal properties in Colombo, Sri Lanka and Phoenix, USA. Climate Research, 34, 241-251.
+\\
+GRIMMOND, C. S. B. & OKE, T. R. 1999a. Evapotranspiration Rates in Urban Areas. International Association of Hydrological Sciences, Publication, 235.
+\\
+GRIMMOND, C. S. B. & OKE, T. R. 1999b. Heat storage in urban areas: Local-scale observations and evaluation of a simple model. Journal of Applied Meteorology, 38, 922-940.
+\\
+GUO, H. S., TEITELBAUM, E., HOUCHOIS, N., BOZLAR, M. & MEGGERS, F. 2018. Revisiting the use of globe thermometers to estimate radiant temperature in studies of heating and ventilation. Energy and Buildings, 180, 83-94.
+\\
+KATO, S., ACKERMAN, T. P., CLOTHIAUX, E. E., MATHER, J. H., MACE, G. G., WESELY, M. L., MURCRAY, F. & MICHALSKY, J. 1997. Uncertainties in modeled and measured clear-sky surface shortwave irradiances. Journal of Geophysical Research-Atmospheres, 102, 25881-25898.
+\\
+KONARSKA, J., HOLMER, B., LINDBERG, F. & THORSSON, S. 2016. Influence of vegetation and building geometry on the spatial variations of air temperature and cooling rates in a high-latitude city. International Journal of Climatology, 36, 2379-2395.
+\\
+KONARSKA, J., LINDBERG, F., LARSSON, A., THORSSON, S. & HOLMER, B. 2014. Transmissivity of solar radiation through crowns of single urban trees—application for outdoor thermal comfort modelling. Theoretical and Applied Climatology, 117, 363-376.
+\\
+KONG, L., LAU, K. K. L., YUAN, C., CHEN, Y., XU, Y., REN, C. & NG, E. 2017. Regulation of outdoor thermal comfort by trees in Hong Kong. Sustainable Cities and Society, 31, 12-25.
+\\
+KUEHN, L. A., STUBBS, R. A. & WEAVER, R. S. 1970. Theory of the globe thermometer. Journal of Applied Physiology, 29, 750-757.
+\\
+LI, H., HE, Y. & HARVEY, J. 2016. Human Thermal Comfort. Transportation Research Record: Journal of the Transportation Research Board, 2575, 92-102.
+\\
+LOUGHNAN, M., CARROLL, M. & TAPPER, N. J. 2015. The relationship between housing and heat wave resilience in older people. International Journal of Biometeorology, 59, 1291-1298.
+\\
+LOUGHNAN, M. E., NICHOLLS, N. & TAPPER, N. J. 2008. Demographic, seasonal, and spatial differences in acute myocardial infarction admissions to hospital in Melbourne Australia. International Journal of Health Geographics, 7, 42.
+\\
+MAHMOOD, R., PIELKE, R. A., HUBBARD, K. G., NIYOGI, D., DIRMEYER, P. A., MCALPINE, C., CARLETON, A. M., HALE, R., GAMEDA, S., BELTRAN-PRZEKURAT, A., BAKER, B., MCNIDER, R., LEGATES, D. R., SHEPHERD, M., DU, J., BLANKEN, P. D., FRAUENFELD, O. W., NAIR, U. S. & FALL, S. 2014. Land cover changes and their biogeophysical effects on climate. International Journal of Climatology, 34, 929-953.
+\\
+MAHMOOD, R., PIELKE SR, R. A., HUBBARD, K. G., NIYOGI, D., BONAN, G., LAWRENCE, P., MCNIDER, R., MCALPINE, C., ETTER, A., GAMEDA, S., QIAN, B., CARLETON, A., BELTRAN-PRZEKURAT, A., CHASE, T., QUINTANAR, A. I., ADEGOKE, J. O., VEZHAPPARAMBU, S., CONNER, G., ASEFI, S., SERTEL, E., LEGATES, D. R., WU, Y., HALE, R., FRAUENFELD, O. W., WATTS, A., SHEPHERD, M., MITRA, C., ANANTHARAJ, V. G., FALL, S., LUND, R., TREVINO, A., BLANKEN, P., DU, J., CHANG, H.-I., LEEPER, R., NAIR, U. S., DOBLER, S., DEO, R. & SYKTUS, J. 2010. Impacts of land use/land cover change on climate and future research priorities. Bulletin of the American Meteorological Society, 91, 37-46.
+\\
+MIDDEL, A., SELOVER, N., HAGEN, B. & CHHETRI, N. 2016. Impact of shade on outdoor thermal comfort-a seasonal field study in Tempe, Arizona. International Journal of Biometeorology, 60, 1849-1861.
+\\
+MORAAL, P. E., GRIZZLE, J. W. 1995. Observer design for nonlinear systems with discrete-time measurement. IEEE Transactions on Automatic Control, 40(3): 395-404.
+\\
+NAKAMURA, Y. & OKE, T. R. 1988. Wind, temperature and stability conditions in an east-west oriented urban canyon. Atmospheric Environment (1967), 22, 2691-2700.
+\\
+OKE, T. R. 1973. CITY SIZE AND URBAN HEAT ISLAND. Atmospheric Environment, 7, 769-779.
+\\
+OKE, T. R. 1981. CANYON GEOMETRY AND THE NOCTURNAL URBAN HEAT-ISLAND - COMPARISON OF SCALE MODEL AND FIELD OBSERVATIONS. Journal of Climatology, 1, 237-&.
+\\
+OKE, T. R. 1982. THE ENERGETIC BASIS OF THE URBAN HEAT-ISLAND. Quarterly Journal of the Royal Meteorological Society, 108, 1-24.
+\\
+OKE, T. R. 1988. The Urban Energy Balance. Progress in Physical Geography, 12, 471.
+\\
+OKE, T. R. 1989. THE MICROMETEOROLOGY OF THE URBAN FOREST. Philosophical Transactions of the Royal Society of London Series B-Biological Sciences, 324, 335-349.
+\\
+PEARLMUTTER, D., BITAN, A. & BERLINER, P. 1999. Microclimatic analysis of “compact” urban canyons in an arid zone. Atmospheric Environment, 33, 4143-4150.
+\\
+PEARLMUTTER, D., JIAO, D. & GARB, Y. 2014. The relationship between bioclimatic thermal stress and subjective thermal sensation in pedestrian spaces. International Journal of Biometeorology, 58, 2111-2127.
+\\
+RANSON, K. J., IRONS, J. R. & DAUGHTRY, C. S. T. 1991. Surface albedo from bidirectional reflectance. Remote Sensing of Environment, 35, 201-211.
+\\
+ROSS, J. & SULEV, M. 2000. Sources of errors in measurements of PAR. Agricultural and Forest Meteorology, 100, 103-125.
+\\
+SHAM, J. F. C., MEMON, S. A., TOMMY & LO, Y. 2013. Application of continuous surface temperature monitoring technique for investigation of nocturnal sensible heat release characteristics by building fabrics in Hong Kong. Energy and Buildings, 58, 1-10.
+\\
+SNIR, K., PEARLMUTTER, D. & ERELL, E. 2016. The moderating effect of water-efficient ground cover vegetation on pedestrian thermal stress. Landscape and Urban Planning, 152, 1-12.
+\\
+SPRONKEN-SMITH, R. A., OKE, T. R. & LOWRY, W. P. 2000. Advection and the surface energy balance across an irrigated urban park. International Journal of Climatology, 20, 1033-1047.
+\\
+THOM, J. K., COUTTS, A. M., BROADBENT, A. M. & TAPPER, N. J. 2016. The influence of increasing tree cover on mean radiant temperature across a mixed development suburb in Adelaide, Australia. Urban Forestry & Urban Greening, 20, 233-242.
+\\
+THORSSON, S., LINDBERG, F., ELIASSON, I. & HOLMER, B. 2007. Different methods for estimating the mean radiant temperature in an outdoor urban setting. International Journal of Climatology, 27, 1983-1993.
+
+\printbibliography %Prints bibliography
+
+
+\end{document}
+
